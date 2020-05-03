@@ -1,0 +1,73 @@
+{
+  "kind": "collectionType",
+  "connection": "default",
+  "collectionName": "capstones",
+  "info": {
+    "name": "Capstone"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "CapstoneName": {
+      "type": "string"
+    },
+    "StartDate": {
+      "type": "datetime"
+    },
+    "EndDate": {
+      "type": "datetime"
+    },
+    "Description": {
+      "type": "richtext"
+    },
+    "Pictures": {
+      "collection": "file",
+      "via": "related",
+      "plugin": "upload",
+      "required": false
+    },
+    "DisplayPhoto": {
+      "model": "file",
+      "via": "related",
+      "plugin": "upload",
+      "required": false
+    },
+    "Featured": {
+      "type": "boolean"
+    },
+    "viewcount": {
+      "type": "integer"
+    },
+    "posts": {
+      "collection": "post",
+      "via": "capstone"
+    },
+    "moderator": {
+      "plugin": "users-permissions",
+      "model": "user",
+      "via": "moderated"
+    },
+    "sponsors": {
+      "via": "capstones",
+      "collection": "sponsor",
+      "dominant": true
+    },
+    "department": {
+      "via": "capstones",
+      "model": "department"
+    },
+    "creators": {
+      "plugin": "users-permissions",
+      "collection": "user",
+      "via": "createdcapstones",
+      "dominant": true
+    },
+    "tags": {
+      "collection": "tags",
+      "via": "capstones",
+      "dominant": true
+    }
+  }
+}

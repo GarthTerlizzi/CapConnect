@@ -1,0 +1,29 @@
+Strapi
+    Could we re-style the admin panel as Capconnect?
+All Types
+    Advanced fields such as required values, defaults, and min & max length
+Capstone
+    CapstoneName should be Name
+    StartDate and EndDate should be Start and End
+    DisplayPhoto needs a better name?
+    viewcount Goes against naming conventions
+Comment
+    Eliminate?
+    Some fields break naming conventions
+    What's the point of username?
+Department
+    Why are they all lowercase? Naming conventions.
+Faq
+    Faq should be FAQ
+    Should Category be a content type? Is the excessive?
+    url should be URL and shouldn't be rich text
+Post
+    thelackofnamingconventionsisdrivingmeupthewall.gif
+Sponsor
+    Should Sponsor just be another role?
+    why was it url before but now it's webUrl? I think that's worse.
+Sponsorrequest
+    Should at least be SponsorRequest
+    Make part of a capstone request or some kind of user account creation?
+Viewstats
+    What even is this

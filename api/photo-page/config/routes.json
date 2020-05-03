@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/photo-pages",
+      "handler": "photo-page.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/photo-pages/count",
+      "handler": "photo-page.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/photo-pages/:id",
+      "handler": "photo-page.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/photo-pages",
+      "handler": "photo-page.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/photo-pages/:id",
+      "handler": "photo-page.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/photo-pages/:id",
+      "handler": "photo-page.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

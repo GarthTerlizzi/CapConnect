@@ -1,0 +1,26 @@
+{
+  "kind": "collectionType",
+  "connection": "default",
+  "collectionName": "sponsor_capstone_requests",
+  "info": {
+    "name": "SponsorCapstoneRequests"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "Capstone": {
+      "unique": true,
+      "model": "capstone"
+    },
+    "Sponsor": {
+      "unique": true,
+      "model": "sponsor"
+    },
+    "Accepted": {
+      "type": "boolean",
+      "default": false
+    }
+  }
+}

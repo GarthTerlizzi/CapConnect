@@ -1,0 +1,1 @@
+{"options":{},"indexes":[{"v":{"$numberInt":"2"},"key":{"_id":{"$numberInt":"1"}},"name":"_id_","ns":"capconnect.upload_file"}],"uuid":"ef738723ff1149c9b9a56b9acee992b7"}

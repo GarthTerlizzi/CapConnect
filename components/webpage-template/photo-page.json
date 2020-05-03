@@ -1,0 +1,35 @@
+{
+  "connection": "default",
+  "collectionName": "components_webpage_template_photo_pages",
+  "info": {
+    "name": "Photo Page",
+    "icon": "camera"
+  },
+  "options": {},
+  "attributes": {
+    "Title": {
+      "type": "string",
+      "required": true
+    },
+    "Images": {
+      "collection": "file",
+      "via": "related",
+      "plugin": "upload",
+      "required": true
+    },
+    "TextboxTitle": {
+      "type": "string",
+      "required": true
+    },
+    "Text": {
+      "type": "richtext",
+      "required": true
+    },
+    "BackgroundImage": {
+      "model": "file",
+      "via": "related",
+      "plugin": "upload",
+      "required": false
+    }
+  }
+}

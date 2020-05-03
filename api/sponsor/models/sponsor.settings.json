@@ -1,0 +1,49 @@
+{
+  "kind": "collectionType",
+  "connection": "default",
+  "collectionName": "sponsors",
+  "info": {
+    "name": "Sponsor"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "Name": {
+      "type": "string"
+    },
+    "description": {
+      "type": "richtext"
+    },
+    "webUrl": {
+      "type": "string"
+    },
+    "adverts": {
+      "collection": "file",
+      "via": "related",
+      "plugin": "upload",
+      "required": false
+    },
+    "logo": {
+      "model": "file",
+      "via": "related",
+      "plugin": "upload",
+      "required": false
+    },
+    "capstones": {
+      "collection": "capstone",
+      "via": "sponsors"
+    },
+    "User": {
+      "plugin": "users-permissions",
+      "model": "user"
+    },
+    "Company": {
+      "type": "string"
+    },
+    "Email": {
+      "type": "string"
+    }
+  }
+}

@@ -1,0 +1,1 @@
+{"options":{},"indexes":[{"v":{"$numberInt":"2"},"key":{"_id":{"$numberInt":"1"}},"name":"_id_","ns":"capconnect.covid_19_s"},{"v":{"$numberInt":"2"},"unique":true,"key":{"URL":{"$numberInt":"1"}},"name":"URL_1","ns":"capconnect.covid_19_s","partialFilterExpression":{"URL":{"$type":"string"}},"background":true}],"uuid":"8abfd4d48d6a4a81898e244e9e590051"}

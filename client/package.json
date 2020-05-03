@@ -1,0 +1,68 @@
+{
+  "name": "experiment",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@auth0/auth0-spa-js": "^1.7.0",
+    "@material-ui/core": "^4.9.10",
+    "@material-ui/icons": "^4.9.1",
+    "@material-ui/lab": "^4.0.0-alpha.49",
+    "@testing-library/jest-dom": "^5.5.0",
+    "@testing-library/react": "^10.0.2",
+    "@testing-library/user-event": "^10.0.1",
+    "axios": "^0.19.2",
+    "cross-env": "^7.0.2",
+    "d3-ease": "^1.0.6",
+    "fuse.js": "^5.1.0",
+    "hoist-non-react-statics": "^3.3.2",
+    "jwt-decode": "^2.2.0",
+    "react": "^16.13.1",
+    "react-app-rewire-multiple-entry": "^2.1.0",
+    "react-app-rewired": "^2.1.5",
+    "react-bootstrap": "^1.0.1",
+    "react-circular-progressbar": "^2.0.3",
+    "react-dom": "^16.13.1",
+    "react-helmet": "^6.0.0",
+    "react-material-ui-carousel": "^1.1.1",
+    "react-move": "^6.1.0",
+    "react-loading-skeleton": "^2.0.1",
+    "react-parallax": "^3.0.3",
+    "react-router-dom": "^5.1.2",
+    "react-scripts": "3.4.1",
+    "react-share": "^4.1.0",
+    "react-sharingbuttons": "^1.0.0",
+    "recompose": "^0.30.0",
+    "symlink-dir": "^3.1.2",
+    "auto-bind": "latest"
+  },
+  "scripts": {
+    "start": "cross-env SKIP_PREFLIGHT_CHECK=true react-app-rewired start",
+    "build": "cross-env SKIP_PREFLIGHT_CHECK=true react-app-rewired build",
+    "postbuild": "symlink-dir uploads build/uploads",
+    "test": "cross-env SKIP_PREFLIGHT_CHECK=true react-app-rewired test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "bad-words": "^3.0.3",
+    "hide-scrollbar-react": "^1.1.6",
+    "prop-types": "^15.7.2",
+    "react-reveal": "^1.2.2",
+    "react-tag-autocomplete": "^5.12.1"
+  },
+  "proxy": "http://localhost:1337"
+}

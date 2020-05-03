@@ -1,0 +1,1 @@
+{"options":{},"indexes":[{"v":{"$numberInt":"2"},"key":{"_id":{"$numberInt":"1"}},"name":"_id_","ns":"capconnect.tags"},{"v":{"$numberInt":"2"},"unique":true,"key":{"Name":{"$numberInt":"1"}},"name":"Name_1","ns":"capconnect.tags","background":true}],"uuid":"6232603ce74747f48e57f1b2d061b1d1"}

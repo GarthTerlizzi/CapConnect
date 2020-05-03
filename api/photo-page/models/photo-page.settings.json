@@ -1,0 +1,53 @@
+{
+  "kind": "collectionType",
+  "connection": "default",
+  "collectionName": "photo_pages",
+  "info": {
+    "name": "Photo Page"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "NavDisplayText": {
+      "type": "string",
+      "required": true
+    },
+    "URL": {
+      "type": "uid",
+      "targetField": "NavDisplayText",
+      "required": true
+    },
+    "Visibility": {
+      "type": "enumeration",
+      "enum": [
+        "listed",
+        "unlisted",
+        "disabled"
+      ],
+      "default": "listed",
+      "required": true
+    },
+    "ViewPermission": {
+      "type": "enumeration",
+      "enum": [
+        "Public",
+        "Authenticated",
+        "StudentAndProfessor",
+        "MarketingAndProfessor",
+        "Sponsor",
+        "Marketing",
+        "Professor"
+      ],
+      "default": "Authenticated",
+      "required": true
+    },
+    "PageInfo": {
+      "type": "component",
+      "repeatable": false,
+      "component": "webpage-template.photo-page",
+      "required": true
+    }
+  }
+}

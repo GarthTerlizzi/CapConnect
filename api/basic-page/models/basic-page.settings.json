@@ -1,0 +1,53 @@
+{
+  "kind": "collectionType",
+  "connection": "default",
+  "collectionName": "basic_pages",
+  "info": {
+    "name": "Basic Page"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "NavDisplayText": {
+      "type": "string",
+      "required": true
+    },
+    "URL": {
+      "type": "uid",
+      "targetField": "NavDisplayText",
+      "required": true
+    },
+    "PageInfo": {
+      "type": "component",
+      "repeatable": false,
+      "component": "webpage-template.basic-page",
+      "required": true
+    },
+    "Visibility": {
+      "type": "enumeration",
+      "enum": [
+        "listed",
+        "unlisted",
+        "disabled"
+      ],
+      "required": true,
+      "default": "listed"
+    },
+    "ViewPermission": {
+      "type": "enumeration",
+      "enum": [
+        "Public",
+        "Authenticated",
+        "StudentAndProfessor",
+        "MarketingAndProfessor",
+        "Sponsor",
+        "Marketing",
+        "Professor"
+      ],
+      "required": true,
+      "default": "Authenticated"
+    }
+  }
+}

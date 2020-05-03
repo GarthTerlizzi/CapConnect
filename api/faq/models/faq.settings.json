@@ -1,0 +1,25 @@
+{
+  "info": {
+    "name": "Faq"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "Category": {
+      "type": "string"
+    },
+    "Question": {
+      "type": "richtext"
+    },
+    "Answer": {
+      "type": "richtext"
+    },
+    "url": {
+      "type": "richtext"
+    }
+  },
+  "connection": "default",
+  "collectionName": "faqs"
+}

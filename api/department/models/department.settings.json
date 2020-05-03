@@ -1,0 +1,36 @@
+{
+  "kind": "collectionType",
+  "connection": "default",
+  "collectionName": "departments",
+  "info": {
+    "name": "Department"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "description": {
+      "type": "richtext"
+    },
+    "contact": {
+      "type": "email"
+    },
+    "capstones": {
+      "collection": "capstone",
+      "via": "department"
+    },
+    "viewstats": {
+      "model": "viewstats",
+      "via": "department"
+    },
+    "users": {
+      "via": "Department",
+      "plugin": "users-permissions",
+      "collection": "user"
+    }
+  }
+}

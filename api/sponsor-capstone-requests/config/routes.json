@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/sponsor-capstone-requests",
+      "handler": "sponsor-capstone-requests.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/sponsor-capstone-requests/count",
+      "handler": "sponsor-capstone-requests.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/sponsor-capstone-requests/:id",
+      "handler": "sponsor-capstone-requests.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/sponsor-capstone-requests",
+      "handler": "sponsor-capstone-requests.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/sponsor-capstone-requests/:id",
+      "handler": "sponsor-capstone-requests.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/sponsor-capstone-requests/:id",
+      "handler": "sponsor-capstone-requests.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

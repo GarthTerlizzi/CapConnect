@@ -1,0 +1,25 @@
+{
+  "kind": "collectionType",
+  "connection": "default",
+  "collectionName": "sponsorrequests",
+  "info": {
+    "name": "Sponsorrequest"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "Company": {
+      "type": "string"
+    },
+    "Accepted": {
+      "type": "boolean",
+      "default": false
+    },
+    "User": {
+      "plugin": "users-permissions",
+      "model": "user"
+    }
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "connection": "default",
+  "collectionName": "components_webpage_template_basic_pages",
+  "info": {
+    "name": "Basic Page",
+    "icon": "file"
+  },
+  "options": {},
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "TextboxTitle": {
+      "type": "string"
+    },
+    "Text": {
+      "type": "richtext"
+    },
+    "BackgroundImage": {
+      "model": "file",
+      "via": "related",
+      "plugin": "upload",
+      "required": false
+    },
+    "DisplayImage": {
+      "model": "file",
+      "via": "related",
+      "plugin": "upload",
+      "required": true
+    }
+  }
+}

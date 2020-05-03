@@ -1,0 +1,26 @@
+{
+  "kind": "collectionType",
+  "connection": "default",
+  "collectionName": "viewstats",
+  "info": {
+    "name": "Viewstats"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "count": {
+      "type": "string"
+    },
+    "department": {
+      "via": "viewstats",
+      "model": "department"
+    },
+    "user": {
+      "via": "viewstats",
+      "plugin": "users-permissions",
+      "model": "user"
+    }
+  }
+}

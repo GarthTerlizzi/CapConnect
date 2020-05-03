@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/capstones",
+      "handler": "capstone.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/capstones/count",
+      "handler": "capstone.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/capstones/:id",
+      "handler": "capstone.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/capstones",
+      "handler": "capstone.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/capstones/:id",
+      "handler": "capstone.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/capstones/:id",
+      "handler": "capstone.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

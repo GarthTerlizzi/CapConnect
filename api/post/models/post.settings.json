@@ -1,0 +1,39 @@
+{
+  "kind": "collectionType",
+  "connection": "default",
+  "collectionName": "posts",
+  "info": {
+    "name": "Post"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "content": {
+      "type": "richtext"
+    },
+    "media": {
+      "collection": "file",
+      "via": "related",
+      "plugin": "upload",
+      "required": false
+    },
+    "capstone": {
+      "via": "posts",
+      "model": "capstone"
+    },
+    "comments": {
+      "collection": "comment",
+      "via": "post"
+    },
+    "user": {
+      "via": "posts",
+      "plugin": "users-permissions",
+      "model": "user"
+    }
+  }
+}

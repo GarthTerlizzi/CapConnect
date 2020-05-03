@@ -1,0 +1,7 @@
+{"_id":{"$oid":"5e9c9f7976da5956587ee8d3"},"name":"Professor","description":"","type":"student_professor","createdAt":{"$date":"2020-04-19T18:59:05.165Z"},"updatedAt":{"$date":"2020-04-27T17:27:07.263Z"},"__v":0}
+{"_id":{"$oid":"5c461785fe16690229b33c5c"},"name":"Public","description":"Default role given to unauthenticated user.","type":"public","__v":0,"updatedAt":{"$date":"2020-04-27T00:51:54.542Z"}}
+{"_id":{"$oid":"5c461785fe16690229b33c5a"},"name":"Administrator","description":"These users have all access in the project.","type":"root","__v":0,"updatedAt":{"$date":"2020-04-27T17:29:02.488Z"}}
+{"_id":{"$oid":"5e9e195f3928275a44743f06"},"name":"Marketing","description":"","type":"marketing","createdAt":{"$date":"2020-04-20T21:51:27.505Z"},"updatedAt":{"$date":"2020-04-27T00:54:05.295Z"},"__v":0}
+{"_id":{"$oid":"5e9e19e63928275a44743f8c"},"name":"Student","description":"","type":"student","createdAt":{"$date":"2020-04-20T21:53:42.207Z"},"updatedAt":{"$date":"2020-04-27T00:54:40.459Z"},"__v":0}
+{"_id":{"$oid":"5c461785fe16690229b33c5b"},"name":"Authenticated","description":"Default role given to authenticated user.","type":"authenticated","__v":0,"updatedAt":{"$date":"2020-04-27T00:53:55.735Z"}}
+{"_id":{"$oid":"5e9b9ab676da5956587ee84d"},"name":"Sponsor","description":"","type":"sponsor","createdAt":{"$date":"2020-04-19T00:26:30.075Z"},"updatedAt":{"$date":"2020-04-27T00:54:29.061Z"},"__v":0}

@@ -1,0 +1,49 @@
+version: '3'
+services:
+  strapi:
+    container_name: ${CAPPY_PREFIX:-}capconnect-strapi
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    environment:
+      - DATABASE_CLIENT=mongo
+      - DATABASE_HOST=db
+      - DATABASE_PORT=27017
+      - DATABASE_NAME=capconnect
+      - DATABASE_USERNAME=
+      - DATABASE_PASSWORD=
+      - DATABASE_AUTHENTICATION_DATABASE=capconnect
+#    ports:
+#      - "${CAPPY_HTTP_PORT:-80}:1337"
+#      - "${CAPPY_HTTPS_PORT:-443}:8443"
+    volumes:
+#      - ./docker/${CAPPY_PREFIX:-}capconnect/:/usr/src/app
+      - ./docker/${CAPPY_PREFIX:-}capconnect/uploads:/usr/src/app/client/uploads
+    depends_on:
+      - db
+
+  db:
+    container_name: ${CAPPY_PREFIX:-}capconnect-db
+    image: mongo:4.2.3-bionic
+    environment:
+      - MONGO_INITDB_DATABASE=strapi
+    #ports:
+    #  - 27017:27017
+    volumes:
+      - ./docker/${CAPPY_PREFIX:-}capconnect/db:/data/db
+    restart: always
+
+  web:
+    container_name: ${CAPPY_PREFIX:-}capconnect-web
+    image: caddy:2.0.0-rc.3
+    environment:
+      - CAPPY_ADDRESS=${CAPPY_HTTP_PORT:-localhost}
+    ports:
+      - "${CAPPY_HTTP_PORT:-80}:80"
+      - "${CAPPY_HTTPS_PORT:-443}:443"
+    volumes:
+      - ./caddy/Caddyfile:/etc/caddy/Caddyfile
+      - ./docker/${CAPPY_PREFIX:-}capconnect/web/data:/data
+      - ./docker/${CAPPY_PREFIX:-}capconnect/web/config:/config
+    depends_on:
+      - strapi

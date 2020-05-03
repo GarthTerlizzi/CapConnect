@@ -1,0 +1,10 @@
+{
+  "favicon": {
+    "path": "favicon.ico",
+    "maxAge": 86400000
+  },
+  "public": {
+    "path": "./client/build",
+    "maxAge": 60000
+  }
+}
